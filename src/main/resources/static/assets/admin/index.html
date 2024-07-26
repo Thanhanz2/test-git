@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java 6 Project</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- Custom CSS -->
+<link href="/assets/css/shopping-cart-app.css" rel="stylesheet" />
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- AngularJS -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+</head>
+
+<body class="container" ng-app="admin-app">
+	<header class="row">
+		<h2 class="alert alert-success text-center">Web Administration</h2>
+	</header>
+	<div class="row">
+		<nav class="navbar navbar-inverse" style="font-variant: small-caps;">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="#!product">Products</a></li>
+					<li><a href="#!authorize">Authorizing</a></li>
+					<li><a href="/security/logoff">Log Off</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	 <div ng-view></div>
+	<script src="/assets/admin/admin-app.js"></script>
+	<script src="/assets/admin/product/product.js"></script>
+	<script src="/assets/admin/authority/authority.js"></script>
+</body>
+
+</html>
